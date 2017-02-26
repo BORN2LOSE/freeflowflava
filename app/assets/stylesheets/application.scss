@@ -1,0 +1,171 @@
+@import "bootstrap";
+
+/* mixins, variables, etc. */
+$gray-medium-light: #eaeaea;
+
+.body {
+  padding-top: 60px;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.block {
+ overflow: hidden;
+}
+
+/* navbar */
+.app-navbar {
+  font-size: 15px;
+  letter-spacing: .15em;
+}
+
+.navbar-default {
+  background-color: white;
+  border-color: black;
+}
+
+.navbar-padded {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.app-navbar .navbar-brand {
+  font-size: 17px;
+}
+
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
+/* forms */
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
+}
+
+/* sidebar */
+aside {
+  section.user_info {
+    margin-top: 20px;
+  }
+  section {
+    padding: 10px 0;
+    margin-top: 20px;
+    &:first-child {
+      border: 0;
+      padding-top: 0;
+    }
+    span {
+      display: block;
+      margin-bottom: 3px;
+      line-height: 1;
+    }
+    h1 {
+      font-size: 1.4em;
+      text-align: right;
+      letter-spacing: -1px;
+      margin-bottom: 3px;
+      margin-top: 0px;
+    }
+  }
+}
+
+/* intro block */
+.app-block-intro {
+  padding-top: 20px;
+}
+
+/* block-title */
+h1.block-title, h1.block-title {
+    font-size: 72px
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 100;
+  src:  url(http://fonts.gstatic.com/s/roboto/v15/ty9dfvLAziwdqQ2dHoyjphTbgVql8nDJpwnrE27mub0.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
+}
+.text-uppercase {
+    font-family:Roboto;
+	  font-weight:200;
+	  line-height:1.2;
+    color:inherit;
+    text-transform: uppercase;
+    letter-spacing: .15em;
+    padding-bottom: 10px;
+}
+
+.about {
+  text-align: center;
+  p {
+    font-size: 20px;
+    padding-top: 5px;
+  }
+}
+
+/* Ошибочки */
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
+  }
+}
+
+
+
+/* Батон */
+.btn {
+  border-radius: 0px;
+  background-color: black;
+}
+
+.text-center {
+  font-size: 65px;
+  padding-top: 50px;
+}
+
+/* footer block */
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid $gray-medium-light;
+  color: $gray-light;
+  a {
+    color: $gray;
+    &:hover {
+      color: $gray-darker;
+    }
+  }
+  small {
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 15px;
+    }
+  }
+}
