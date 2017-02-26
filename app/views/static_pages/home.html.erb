@@ -17,17 +17,12 @@
     </div>
   </div>
 <% else %>
-  <div class="center jumbotron">
-    <h3>Welcome to the zero-day vulnerability for Ruby</h3>
-    <%= link_to image_tag("ror.jpg", alt: "RoR") %>
-    <h2>
-      This is the home page for the programmer on Python/Ruby,
-      cypherpunk and specialist on information security.
-    </h2>
-
-    <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+  <div class="block app-block-intro">
+      <div class="container text-center">
+        <h1 class="block-title m-b-sm text-uppercase brand-name">Free Flow Flava</h1>
+        <p class="lead m-b-lg text-uppercase p-b-md">The sound, with simplicity.</p>
+        <%= image_tag("contact.jpg", alt: "Seggun", width: '1150') %>
+        <%= link_to "Join to community", signup_path, class: "btn btn-lg btn-primary" %>
+      </div>
   </div>
-
-  <%= link_to image_tag("rails.png", alt: "Rails", width: '100'),
-              'https://ru.wikipedia.org/wiki/Ruby' %>
 <% end %>
