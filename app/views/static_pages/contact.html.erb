@@ -1,6 +1,17 @@
-<% provide(:title, "Contact") %>
-<h1>Contact</h1>
-<p>
-  View my profile on
-  <a href="https://github.com/BORN2LOSE">GitHub</a>.
-</p>
+<% provide(:title, 'Contact') %>
+
+<div class="container text-center">
+  <p>Visit our community</p>
+
+  <%= link_to image_tag("vk.svg", alt: "VK", width: '100'),
+            'https://vk.com/freeflowflavabeats' %>
+
+  <%= link_to image_tag("insta.svg", alt: "Inst", width: '87'),
+            'https://www.instagram.com/freeflowflava/' %>
+
+  <%= link_to image_tag("sound.svg", alt: "SoundCloud", width: '105'),
+            'https://soundcloud.com/freeflowflava' %>
+
+  <%= link_to image_tag("tumb.svg", alt: "Tumblr", width: '80'),
+            'http://freeflowflava.tumblr.com/' %>
+</div>
